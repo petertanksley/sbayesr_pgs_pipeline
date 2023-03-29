@@ -12,7 +12,7 @@
 #========================================================================================#
 
 export PATH=$PATH:/work2/07624/tankslpr/stampede2/TOOLS
-export PATH=$PATH:/work2/07624/tankslpr/stampede2/TOOLS/gctb_2.02_Linux
+export PATH=$PATH:/work2/07624/tankslpr/stampede2/TOOLS/gctb_2.04.3_Linux
 
 #========================================================================================#
 # OPERATIONS
