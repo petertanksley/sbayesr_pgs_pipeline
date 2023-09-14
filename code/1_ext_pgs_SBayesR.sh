@@ -20,7 +20,7 @@ export PATH=$PATH:/work/07624/tankslpr/ls6/TOOLS/plink2
 export PATH=$PATH:/work/07624/tankslpr/ls6/TOOLS/gctb_2.05beta_Linux
 
 #path to ref panels
-LD_DIR="(((LOCATION OF GCTB TOOL)))/gctb_2.05beta_Linux/ld_panels"
+LD_DIR="/work/07624/tankslpr/ls6/TOOLS/gctb_2.05beta_Linux/ld_panels"
 
 #path to sumstats
 SUMSTATS_DIR="../../sumstats/1_formatted_ma"
@@ -29,10 +29,10 @@ SUMSTATS_DIR="../../sumstats/1_formatted_ma"
 OUTPUT_DIR="../output"
 
 #sumstat prefix (e.g., "sumstats_PREFIX.ma")
-SUMSTAT=""
+SUMSTAT="ext"
 
 #path to genotypes
-GENOTYPES=""
+GENOTYPES="/work/07624/tankslpr/ls6/TTP_GENOTYPES/PLINK_FILES/ttp_imputed_info90_maf1e2_hwe1e6_chr1_22_rsid"
 
 #========================================================================================#
 # Run SBayesR. Steps: unzip LD panels, process sumstats, rezip LD panels
@@ -44,7 +44,7 @@ if [[	! -e ${OUTPUT_DIR}/${SUMSTAT}/${SUMSTAT}_sbayesr_ukb2.8M.snpRes || \
 	#set up list of LD panels
 	for chr in {1..22}
 	do
-		echo "${LD_DIR}/ukb_50k_bigset_2.8M/ukb50k_shrunk_chr${chr}_mafpt01.ldm.sparse" >> ld_list.txt
+		echo "/work/07624/tankslpr/ls6/TOOLS/gctb_2.05beta_Linux/ld_panels/ukb_50k_bigset_2.8M/ukb50k_shrunk_chr${chr}_mafpt01.ldm.sparse" >> ld_list.txt
 	done
 
 	mkdir -p ${OUTPUT_DIR}/${SUMSTAT}
